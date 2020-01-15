@@ -12,9 +12,6 @@ import lombok.NoArgsConstructor;
  * @Author: Nlqiong
  * @Date: 2020/1/15 7:58
  */
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class User {
     
 }
