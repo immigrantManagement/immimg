@@ -12,8 +12,17 @@ import lombok.NoArgsConstructor;
  * @Author: Nlqiong
  * @Date: 2020/1/15 7:58
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
-    //测试
-    //测试
+    /**
+     * 用户id，用户权限分类，用户状态
+     */
+    private Integer id,type,flag;
+    /**
+     * 用户手机号，密码，昵称
+     */
+    private String mobile,password,nickname;
 
 }
