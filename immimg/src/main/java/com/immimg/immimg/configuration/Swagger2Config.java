@@ -32,10 +32,11 @@ public class Swagger2Config{
     private String title;
     private String description;
     private String version;
-    /*private String url;
+    private String url;
     private String author;
-    private String email;*/
+    private String email;
 
+    @Bean
     public Docket docket(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())

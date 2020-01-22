@@ -11,10 +11,10 @@ import java.util.List;
  * @Date: 2020/1/15 11:34
  */
 public class Message {
-    private Integer code;
-    private String msg;
-    private Integer count;
-    private List<Object> data;
+    private Integer code;// 状态码
+    private String msg;// 描述性状态文字
+    private Integer count;// 数据量
+    private List<Object> data;// 数据
 
     public Message(Integer code, String msg, Integer count, List<Object> data) {
         this.code = code;

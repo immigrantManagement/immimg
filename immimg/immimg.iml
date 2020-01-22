@@ -66,6 +66,7 @@
     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.23" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-elasticsearch:3.1.14.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.1.12.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:2.1.14.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.10.5" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.client:transport:6.4.3" level="project" />
@@ -128,10 +129,6 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-freemarker:2.1.11.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.29" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:5.1.12.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-quartz:2.1.11.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.1.12.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.quartz-scheduler:quartz:2.3.2" level="project" />
-    <orderEntry type="library" name="Maven: com.mchange:mchange-commons-java:0.2.15" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.11.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.1.11.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.10" level="project" />
