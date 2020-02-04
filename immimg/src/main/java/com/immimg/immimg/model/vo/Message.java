@@ -1,5 +1,7 @@
 package com.immimg.immimg.model.vo;
 
+import com.immimg.immimg.model.entity.News;
+
 import java.util.List;
 
 /**
@@ -23,7 +25,7 @@ public class Message {
         this.data = data;
     }
 
-    public Message() {
+    public Message(int code, String msg, int size, List<News> newsList) {
     }
 
     public Integer getCode() {

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.immimg.immimg.dao.NewsDao">
+
+
+    <!--查询全部-->
+    <select id="selectAll" resultType="com.immimg.immimg.model.entity.News">
+        select id,title,content,author,create_date,update_date,verified_date,photograph,hits
+        from news WHERE `flag`!=0
+    </select>
+
+    <select id="selectFy" resultType="com.immimg.immimg.model.entity.News">
+	  select id,title,content,author,create_date,update_date,verified_date,photograph,hits from news WHERE `flag`!=0 limit #{currentPage},4
+	</select>
+
+    <!--新增-->
+    <insert id="addStudent">
+        insert into news(title,content,author,create_date,update_date,verified_date,photograph,hits)
+        values (#{stu.title}, #{stu.content}, #{stu.author}, #{stu.create_date}, #{stu.update_date}, #{stu.verified_date}, #{stu.photograph}, #{stu.hits});
+    </insert>
+
+    <!--根据id查询-->
+    <select id="selectById" resultType="com.immimg.immimg.model.entity.News">
+        select *
+        from news
+        where id = #{id}
+    </select>
+
+    <!--修改-->
+    <update id="updateStudent">
+        update news
+        set title=#{stu.title},
+            content=#{stu.content},
+            author=#{stu.author},
+            create_date=#{stu.create_date},
+            update_date=#{stu.update_date},
+            verified_date=#{stu.verified_date},
+            photograph=#{stu.photograph},
+            hits=#{stu.hits}
+        where id = #{stu.id}
+    </update>
+
+    <!--删除-->
+    <update id="delStudent">
+        update news
+        set flag=0
+        where id = #{id}
+    </update>
+
+<!--    <select id="get" resultMap="all">-->
+<!--	select * from news-->
+<!--	</select>-->
+
+<!--    <select id="getAll"  resultMap="alln">-->
+<!--	SELECT *FROM  newsdetailed where newsarticleid=#{sid}-->
+<!--	</select>-->
+
+<!--    <resultMap type="com.kgbd2010.entity.Peson" id="all">-->
+<!--        <id column="newsid" property="newsid" />-->
+<!--        <result column="newsheadline" property="newsheadline" />-->
+<!--        <result column="newsbriefcontent" property="newsbriefcontent" />-->
+<!--        <result column="newspicture" property="newspicture" />-->
+<!--        <result column="newscreationdate" property="newscreationdate" />-->
+<!--        <result column="newsarticleid" property="newsarticleid" />-->
+<!--    </resultMap>-->
+
+
+<!--    <resultMap type="com.kgbd2010.entity.Newsparticulars" id="alln">-->
+<!--        <id column="newsarticleid" property="newsarticleid" />-->
+<!--        <result column="newsdetailstitle" property="newsdetailstitle" />-->
+<!--        <result column="releasetime" property="releasetime" />-->
+<!--        <result column="hits" property="hits" />-->
+<!--        <result column="newsdescribe" property="newsdescribe" />-->
+<!--        <result column="newsdescribe1" property="newsdescribe1" />-->
+<!--        <result column="newsdescribe2" property="newsdescribe2" />-->
+<!--        <result column="photograph" property="photograph" />-->
+<!--        <result column="newsdescribe3" property="newsdescribe3" />-->
+<!--        <result column="photograph1" property="photograph1" />-->
+<!--        <result column="newsdescribe4" property="newsdescribe4" />-->
+<!--        <result column="newsdescribe5" property="newsdescribe5" />-->
+<!--        <result column="photograph2" property="photograph2" />-->
+<!--        <result column="newsdescribe6" property="newsdescribe6" />-->
+<!--    </resultMap>-->
+
+<!--    查询新闻页面-->
+    <select id="selectXinWen" resultMap="all">
+        select * from news
+    </select>
+
+        <resultMap type="com.immimg.immimg.model.entity.News" id="all">
+            <id column="id" property="id" />
+            <result column="type" property="type" />
+            <result column="title" property="title" />
+            <result column="content" property="content" />
+            <result column="create_user_id" property="create_user_id" />
+            <result column="author" property="author" />
+            <result column="create_date" property="create_date" />
+            <result column="update_date" property="update_date" />
+            <result column="verified_date" property="verified_date" />
+            <result column="level" property="level" />
+            <result column="index" property="index" />
+            <result column="flag" property="flag" />
+            <result column="photograph" property="photograph" />
+            <result column="hits" property="hits" />
+            <result column="nid" property="nid" />
+        </resultMap>
+
+<!--    根据id查询新闻详情-->
+    <select id="selectNewById" resultMap="xq">
+   SELECT *FROM newsdetails WHERE nid=#{nid}
+</select>
+
+    <resultMap type="com.immimg.immimg.model.entity.NewsDetails" id="xq">
+        <id column="nid" property="nid" />
+        <result column="title" property="title" />
+        <result column="create_user_id" property="create_user_id" />
+        <result column="author" property="author" />
+        <result column="hits" property="hits" />
+        <result column="paragraph1" property="paragraph1" />
+        <result column="paragraph2" property="paragraph2" />
+        <result column="paragraph3" property="paragraph3" />
+        <result column="paragraph4" property="paragraph4" />
+        <result column="paragraph5" property="paragraph5" />
+        <result column="paragraph6" property="paragraph6" />
+        <result column="paragraph7" property="paragraph7" />
+        <result column="paragraph8" property="paragraph8" />
+        <result column="paragraph9" property="paragraph9" />
+        <result column="paragraph10" property="paragraph10" />
+        <result column="paragraph11" property="paragraph11" />
+        <result column="paragraph12" property="paragraph12" />
+        <result column="paragraph13" property="paragraph13" />
+    </resultMap>
+
+</mapper>
